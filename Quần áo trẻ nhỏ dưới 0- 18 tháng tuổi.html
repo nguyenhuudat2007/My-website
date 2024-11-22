@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link rel="icon" href="https://" type="image/png">
+	<title>Quần áo bông nhỏ gọn trẻ sơ sinh</title>
+</head>
+<body>
+    <style>
+        .image-container {
+            position: relative;
+            width: 400px;
+            height:300px;
+            margin-right:0px;
+			margin-left: 1px;
+			margin-top: 20px;
+			margin- bottom:200px;
+
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+        .image-container img.active {
+            display: block;
+        }
+        .button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+        }
+        .button-left {
+            left: 0;
+        }
+        .button-right {
+            right: 0;
+        }
+        table {
+            border-collapse: separate;
+            border-spacing: 0px; 
+            width:900px;
+            height: 100px}
+        th, td {  
+            text-align: left;
+            padding-top: 0px;
+	</style>
+		<h1>Quần Áo Cho Bé Sơ Sinh 0 Đến 18 Tháng Hoạt Hình Gấu Nhỏ Nút Onesies Cho Bé Trai Phong Cách Hàn Quốc Dài Tay Trẻ Sơ Sinh Áo Liền Quần Tập Đi Jumpsuit</h1>
+	<table >
+        <tr>
+            <td>
+                <div class="image-container">
+                    <img src="D:\Voi\ảnh áo trẻ sơ sinh 1.jpg" class="active" alt="Image 1">
+                    <img src="D:\Voi\ảnh áo trẻ sơ sinh 2 .jpg" alt="Image 2">
+                    <img src="D:\Voi\trẻ em sơ sinh 3.jpg" alt="Image 3">
+                    <img src="D:\Voi\trẻ sơ sinh 4.jpg" alt="Image 4">
+                    <img src="D:\Voi\trẻ sơ sinh 5.jpg" alt="Image 5">
+                    <img src="D:\Voi\sơ sinh6.jpg" alt="Image 6">
+                    <img src="D:\Voi\sơ sinh7.jpg" alt="Image 7">
+                    <img src="D:\Voi\sơ sinh8.jpg" alt="Image 8">
+                    <button class="button button-left" onclick="prevImage()">&#10094;</button>
+                    <button class="button button-right" onclick="nextImage()">&#10095;</button>
+                </div></td>
+            <td>
+                <div id="content1"><p> <font size="5px">1,6k đánh giá<br>
+                    <div id="giá cả"><font size="30px" color="red">₫154.000 - ₫166.000</font></div><br>
+                    <font size="5px">Chính sách Trả hàng:  Trả hàng 15 ngày<br>
+                    Bảo hiểm: Bảo hiểm Thời trang Mẹ & Bé<br>
+                    Vận chuyển:
+                    <ul>
+                        <li><font size="5px"><img src="D:\Voi\hangf1.jpg" width="25"height="25">Xử lý đơn hàng bởi Shopee</li>
+                        <li><img src="D:\Voi\xe.jpg" width="25"height="25">Miễn phí vận chuyển</li>
+                        <li><img src="D:\Voi\giao hàng 2.jpg" width="25"height="25">Vận chuyển tới</li>
+                        <li><img src="D:\Voi\xu 1.jpg" width="25"height="25">Phí vận chuyển</li></p>
+                </div></td>
+        </tr>
+    </table>
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.image-container img');
+        
+        function updateImages() {
+            images.forEach((img, index) => {
+                img.classList.remove('active');
+                if (index === currentIndex) {
+                    img.classList.add('active');
+                }
+            });
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+            updateImages();
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+            updateImages();
+        }
+    </script>
+</body>
+</html>
